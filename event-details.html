@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - UniPortal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/event-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <h1>Uniportal</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="events.html" class="active"><i class="fas fa-calendar-week"></i> Events</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><button id="logoutBtn" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="event-details-container">
+        <div class="event-details-card">
+            <div class="event-header">
+                <div class="event-category-badge" id="eventCategoryBadge">
+                    <i class="fas fa-tag"></i>
+                    <span id="eventCategory">Category</span>
+                </div>
+                <div class="event-title-section">
+                    <h1 id="eventTitle">Event Title</h1>
+                    <div class="event-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span id="eventDate">Date</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="eventTime">Time</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="eventLocation">Location</span>
+                        </div>
+                    </div>
+                    <div class="event-organizer">
+                        <i class="fas fa-user-tie"></i>
+                        <span id="eventOrganizer">Organizer</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event-image">
+                <img id="eventImage" src="" alt="Event Image">
+            </div>
+            
+            <div class="event-content">
+                <div class="event-description">
+                    <h2>About the Event</h2>
+                    <p id="eventDescription">Event description will be loaded here...</p>
+                </div>
+                
+                <div class="event-details">
+                    <div class="detail-section">
+                        <h3>Event Details</h3>
+                        <ul>
+                            <li><strong>Category:</strong> <span id="eventCategory">Category</span></li>
+                            <li><strong>Organizer:</strong> <span id="eventOrganizer">Organizer</span></li>
+                            <li><strong>Capacity:</strong> <span id="eventCapacity">Capacity</span></li>
+                            <li><strong>Registration Deadline:</strong> <span id="eventDeadline">Deadline</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="registration-section">
+                        <div class="registration-buttons">
+                            <button id="registerBtn" class="btn-primary">
+                                <i class="fas fa-ticket-alt"></i> Register for Event
+                            </button>
+                            <button id="cancelRegistrationBtn" class="btn-secondary" style="display: none;">
+                                <i class="fas fa-times"></i> Cancel Registration
+                            </button>
+                        </div>
+                        <p class="registration-status" id="registrationStatus"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Uniportal</h3>
+                <p>Your event management platform</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="profile.html">Profile</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@uniportal.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Event Street, City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Uniportal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/event-details.js"></script>
+</body>
+</html> 

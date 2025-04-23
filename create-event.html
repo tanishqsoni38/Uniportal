@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - Uniportal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Uniportal</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn-primary">Register</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Create New Event</h2>
+            <form id="createEventForm">
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName" name="eventName" required minlength="3" maxlength="100">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDescription">Event Description</label>
+                    <textarea id="eventDescription" name="eventDescription" rows="4" required minlength="10" maxlength="1000"></textarea>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventCategory">Category</label>
+                    <select id="eventCategory" name="eventCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="music">Music</option>
+                        <option value="sports">Sports</option>
+                        <option value="art">Art & Culture</option>
+                        <option value="business">Business</option>
+                        <option value="education">Education</option>
+                    </select>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventTheme">Theme</label>
+                    <select id="eventTheme" name="eventTheme" required>
+                        <option value="">Select Theme</option>
+                        <option value="family">Family Friendly</option>
+                        <option value="professional">Professional</option>
+                        <option value="social">Social</option>
+                        <option value="charity">Charity</option>
+                    </select>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required min="<?php echo date('Y-m-d'); ?>">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventTime">Event Time</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventLocation">Location</label>
+                    <input type="text" id="eventLocation" name="eventLocation" required minlength="5" maxlength="200">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventCapacity">Maximum Capacity</label>
+                    <input type="number" id="eventCapacity" name="eventCapacity" min="1" max="10000" required>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventPrice">Ticket Price (if applicable)</label>
+                    <input type="number" id="eventPrice" name="eventPrice" min="0" step="0.01">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventImage">Event Image</label>
+                    <input type="file" id="eventImage" name="eventImage" accept="image/*">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventContact">Contact Information</label>
+                    <input type="text" id="eventContact" name="eventContact" required minlength="5" maxlength="100">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventWebsite">Event Website (if applicable)</label>
+                    <input type="url" id="eventWebsite" name="eventWebsite">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventTerms">Terms and Conditions</label>
+                    <textarea id="eventTerms" name="eventTerms" rows="3"></textarea>
+                    <small class="error-message"></small>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%;">
+                    <i class="fas fa-plus-circle"></i> Create Event
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Uniportal</h3>
+                <p>Your event management platform</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@uniportal.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Uniportal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/create-event.js"></script>
+</body>
+</html> 
